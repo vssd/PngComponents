@@ -29,6 +29,9 @@ procedure SlicePNG(JoinedPNG: TPngImage; Columns, Rows: Integer; out SlicedPNGs:
 implementation
 
 uses
+  {$IF RTLVersion >= 35.0 }
+  Classes,
+  {$IFEND}
   SysUtils;
 
 function ColorToTriple(Color: TColor): TRGBTriple;
