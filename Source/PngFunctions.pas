@@ -29,10 +29,7 @@ procedure SlicePNG(JoinedPNG: TPngImage; Columns, Rows: Integer; out SlicedPNGs:
 implementation
 
 uses
-  {$IF RTLVersion >= 35.0 }
-  Classes,
-  {$IFEND}
-  SysUtils;
+  SysUtils, Classes;
 
 function ColorToTriple(Color: TColor): TRGBTriple;
 var
